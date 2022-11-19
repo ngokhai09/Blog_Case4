@@ -8,4 +8,5 @@ const express_1 = require("express");
 const account_controller_1 = __importDefault(require("../controller/account-controller"));
 exports.accountRouter = (0, express_1.Router)();
 exports.accountRouter.post('/register', account_controller_1.default.register);
+exports.accountRouter.post('/login', account_controller_1.default.login);
 //# sourceMappingURL=account-router.js.map

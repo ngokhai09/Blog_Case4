@@ -11,6 +11,13 @@ class AccountController {
             account = await account_service_1.default.addAccount(account);
             return res.status(201).json(account);
         };
+        this.login = async (req, res) => {
+            let account = req.body;
+            let token = await account_service_1.default.getToken(account);
+            return res.status(200).json({
+                token: token
+            });
+        };
     }
 }
 exports.default = new AccountController();
