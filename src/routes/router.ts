@@ -1,10 +1,6 @@
 import {Router} from "express";
-import { nextTick } from "process";
-
+import {accountRouter} from "./account-router";
 export const router = Router();
 
-
-router.get("/", (req, res)=>{
-    res.send("Hello");
-})
+router.use('/accounts', accountRouter);
 
