@@ -16,12 +16,12 @@ class AccountService {
         this.getToken = async (account) => {
             const accountFind = await account_1.Account.findOne({ username: account.username });
             if (!accountFind) {
-                return "Account does not exist";
+                return "Fail";
             }
             else {
                 const comparePassword = await bcrypt_1.default.compare(account.password, accountFind.password);
                 if (!comparePassword) {
-                    return "Wrong Password";
+                    return "Fail";
                 }
                 else {
                     const payload = {

@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from "mongoose";
 import {router} from "./src/routes/router";
 import bodyParser from "body-parser";
+import cors from 'cors';
 import session from "express-session"
 const PORT = 8080;
 const app = express();
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // app.use(fileUpload({
 //     createParentPath: true
 // }));
+app.use(cors());
 app.use('', router)
 app.use(express.static('public'))
 mongoose.connect('mongodb+srv://root:Blog%40123456@cluster0.f2ybqzw.mongodb.net/?retryWrites=true&w=majority').then(() => {
