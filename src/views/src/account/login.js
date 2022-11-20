@@ -1,3 +1,4 @@
+const ACCESS_TOKEN = 'token'
 function showFormLogin() {
     let htmlLogin = `<div class="heading-page header-text">
     </div>
@@ -26,15 +27,13 @@ function showFormLogin() {
                                     <div class="content">
                                             <div class="row">
                                                 <div class="col-md-12 col-sm-12">
-                                                        <input name="email" type="text" id="username"
-                                                               placeholder="Tên tài khoản">
+                                                        <input type="text" id="username"placeholder="Tên tài khoản">
                                                 </div>
                                                 <div class="col-md-12 col-sm-12">
-                                                        <input name="subject" type="text" id="password"
-                                                               placeholder="Mật khẩu">
+                                                        <input type="password" id="password" placeholder="Mật khẩu">
                                                 </div>
                                                 <div class="col-md-12 col-sm-12">
-                                                    <a style="color: #f48840" >Bạn chưa có tài khoản ? | Đăng kí </a>
+                                                    <a style="color: #f48840"  data-toggle="modal" onclick="showFormRegister()" data-target="#exampleModal" >Bạn chưa có tài khoản ? | Đăng kí </a>
                                                 </div>
                                                 <div class="col-lg-12" style="margin-top: 5%">
                                                     <fieldset>
@@ -56,7 +55,6 @@ function showFormLogin() {
     $('#body').html(htmlLogin);
 }
 
-
 //chưa hoàn thiện
 function login() {
     const username = $('#username').val();
@@ -75,6 +73,7 @@ function login() {
         },
         success: (token) => {
             if (token.token !== RESPONSE_FAIL) {
+                localStorage.setItem(ACCESS_TOKEN, token.token)
             } else {
                 alert('Sai tài khoản hoặc mật khẩu')
                 const notification = `<p style="color: #e05353">Sai tài khoản hoặc mật khẩu</p>`;
@@ -86,3 +85,4 @@ function login() {
         }
     })
 }
+
