@@ -1,4 +1,5 @@
 const ACCESS_TOKEN = 'token'
+
 function showFormLogin() {
     let htmlLogin = `<div class="heading-page header-text">
     </div>
@@ -73,6 +74,7 @@ function login() {
         },
         success: (token) => {
             if (token.token !== RESPONSE_FAIL) {
+                alert('Đăng nhập thành công')
                 localStorage.setItem(ACCESS_TOKEN, token.token)
             } else {
                 alert('Sai tài khoản hoặc mật khẩu')
@@ -82,6 +84,7 @@ function login() {
                 const toast = new bootstrap.Toast(div_notification)
                 toast.show()
             }
+            checkNavbar();
         }
     })
 }
