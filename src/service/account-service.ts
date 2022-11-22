@@ -35,6 +35,12 @@ class AccountService {
         let user = await Account.findOne({_id: id});
         return user;
     }
+
+    updateAccount = async (id, account) => {
+        let accountEdit = await Account.findByIdAndUpdate(id, account);
+        accountEdit = await Account.findOne({_id: id});
+        return accountEdit;
+    }
 }
 
 export default new AccountService();

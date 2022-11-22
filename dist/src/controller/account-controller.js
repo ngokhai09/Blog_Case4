@@ -39,10 +39,15 @@ class AccountController {
                 token: token
             });
         };
-        this.finUser = async (req, res) => {
+        this.findAccount = async (req, res) => {
             let id = req.params.id;
             let account = await account_service_1.default.findUser(id);
-            console.log(account);
+            return res.status(201).json(account);
+        };
+        this.editAccount = async (req, res) => {
+            let id = req.params.id;
+            let account = req.body;
+            account = await account_service_1.default.updateAccount(id, account);
             return res.status(201).json(account);
         };
     }

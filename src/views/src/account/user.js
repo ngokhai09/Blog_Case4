@@ -40,7 +40,7 @@ function showUser() {
                           </div>
                           <div class="col-lg-12">
                             <fieldset>
-                              <button type="submit" id="form-submit" class="main-button">Cập nhật</button>
+                              <button type="submit" id="form-submit" class="main-button" onclick="updateUser()">Cập nhật</button>
                             </fieldset>
                           </div>
                         </div>
@@ -100,12 +100,12 @@ function showDataUser() {
             'Content-Type': 'application/json'
         },
         success: (user) => {
-            console.log(user)
             $('#firstname').val(user.firstName);
             $('#lastname').val(user.lastName);
             $('#username').val(user.username);
             $('#phone').val(user.phone);
             $('#imagePreview').css('background-image', 'url(' + user.avatar + ')');
+            localStorage.setItem('avatar', user.avatar);
         }
     })
 }
@@ -113,21 +113,17 @@ function showDataUser() {
 function uploadFile(e) {
     let fbBucketName = 'images';
     let uploader = document.getElementById('uploader');
-        console.log('file upload event', e);
         let file = e.target.files[0];
         let storageRef = firebase.storage().ref(`${fbBucketName}/${file.name}`);
         let uploadTask = storageRef.put(file);
-        uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+        uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
             function (snapshot) {
                 let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 uploader.value = progress;
-                console.log('Upload is ' + progress + '% done');
                 switch (snapshot.state) {
-                    case firebase.storage.TaskState.PAUSED: // or 'paused'
-                        console.log('Upload is paused');
+                    case firebase.storage.TaskState.PAUSED:
                         break;
-                    case firebase.storage.TaskState.RUNNING: // or 'running'
-                        console.log('Upload is running');
+                    case firebase.storage.TaskState.RUNNING:
                         break;
                 }
             }, function (error) {
@@ -143,7 +139,42 @@ function uploadFile(e) {
                 }
             }, function () {
                 let downloadURL = uploadTask.snapshot.downloadURL;
-                console.log('downloadURL ===>', downloadURL);
+                localStorage.setItem('avatar', downloadURL);
+    });
+}
+
+function updateUser() {
+    const firstName = $('#firstname').val();
+    const lastName = $('#lastname').val();
+    const username = $('#username').val();
+    const phone = $('#phone').val();
+    const avatar = localStorage.getItem('avatar');
+    const account = {
+        firstName: firstName,
+        lastName: lastName,
+        userName: username,
+        phone: phone,
+        avatar: avatar
+    }
+    $.ajax({
+        type: 'PUT',
+        url: 'http://localhost:8080/accounts/' + localStorage.getItem(ID_USER),
+        data: JSON.stringify(account),
+        headers: {
+            'Content-Type': 'application/json',
+            // Authorization: 'Bearer ' + localStorage.getItem(ACCESS_TOKEN)
+        },
+        success: (user) => {
+            alert('Cập nhật thành công')
+            $('#firstname').val(user.firstName);
+            $('#lastname').val(user.lastName);
+            $('#username').val(user.username);
+            $('#phone').val(user.phone);
+            $('#imagePreview').css('background-image', 'url(' + user.avatar + ')');
+            localStorage.setItem('avatar', user.avatar);
+        }
     })
 }
+
+
 

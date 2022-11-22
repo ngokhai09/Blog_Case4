@@ -15,10 +15,16 @@ class AccountController {
             token: token
         })
     }
-    finUser = async (req: Request, res: Response) => {
+    findAccount = async (req: Request, res: Response) => {
         let id = req.params.id;
         let account = await accountService.findUser(id);
-        console.log(account)
+        return res.status(201).json(account);
+    }
+
+    editAccount = async (req: Request, res: Response) => {
+        let id = req.params.id;
+        let account = req.body;
+        account = await accountService.updateAccount(id , account);
         return res.status(201).json(account);
     }
 }
