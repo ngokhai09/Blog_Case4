@@ -24,6 +24,7 @@ const auth = (req, res, next) => {
                     });
                 }
                 else {
+                    console.log(data);
                     req.decoded = data;
                     next();
                 }

@@ -13,6 +13,7 @@ exports.accountSchema = new mongoose_1.Schema({
     lastName: String,
     address: String,
     phone: String,
+    avatar: String,
     username: {
         type: String,
         unique: true

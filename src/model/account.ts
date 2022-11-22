@@ -12,6 +12,7 @@ export interface IAccount{
     password?:string;
     create_time?:Date;
     update_time?:Date;
+    avatar: string;
     isActive?:boolean;
 }
 export let accountSchema = new Schema<IAccount>({
@@ -20,6 +21,7 @@ export let accountSchema = new Schema<IAccount>({
     lastName: String,
     address: String,
     phone:String,
+    avatar: String,
     username:{
         type:String,
         unique: true

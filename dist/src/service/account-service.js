@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ID_USER = void 0;
 const account_1 = require("../model/account");
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
@@ -26,13 +27,18 @@ class AccountService {
                 else {
                     const payload = {
                         username: accountFind.username,
-                        id: accountFind._id,
+                        idUser: accountFind._id,
                     };
+                    exports.ID_USER = accountFind._id;
                     return await jsonwebtoken_1.default.sign(payload, auth_middleware_1.SECRET_KEY, {
                         expiresIn: 36000
                     });
                 }
             }
+        };
+        this.findUser = async (id) => {
+            let user = await account_1.Account.findOne({ _id: id });
+            return user;
         };
     }
 }

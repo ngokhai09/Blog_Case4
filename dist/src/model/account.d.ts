@@ -10,6 +10,7 @@ export interface IAccount {
     password?: string;
     create_time?: Date;
     update_time?: Date;
+    avatar: string;
     isActive?: boolean;
 }
 export declare let accountSchema: Schema<IAccount, mongoose.Model<IAccount, any, any, any, any>, {}, {}, {}, {}, "type", IAccount>;

@@ -47,6 +47,7 @@ function register() {
     const phone = $('#phone').val();
     const firstname = $('#firstname').val();
     const lastname = $('#lastname').val();
+    const avatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbz-YbCaWY8W9NHRar7nrc-tF_ZI6HZbqsmw&usqp=CAU'
     const isActive = true;
     const account = {
         username: username,
@@ -55,7 +56,8 @@ function register() {
         phone: phone,
         firstname: firstname,
         lastname: lastname,
-        isActive: isActive
+        isActive: isActive,
+        avatar: avatar
     }
     $.ajax({
         type: 'POST',

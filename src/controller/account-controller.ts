@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import accountService from "../service/account-service";
+import accountService, {ID_USER} from "../service/account-service";
 
 class AccountController {
     register = async (req: Request, res: Response) => {
@@ -7,12 +7,19 @@ class AccountController {
         account = await accountService.addAccount(account);
         return res.status(201).json(account)
     }
-    login = async (req: Request, res: Response) => {
+    login = async (req: any, res: Response) => {
         let account = req.body;
         let token = await accountService.getToken(account);
         return res.status(200).json({
-            token : token
+            idUser: ID_USER,
+            token: token
         })
+    }
+    finUser = async (req: Request, res: Response) => {
+        let id = req.params.id;
+        let account = await accountService.findUser(id);
+        console.log(account)
+        return res.status(201).json(account);
     }
 }
 

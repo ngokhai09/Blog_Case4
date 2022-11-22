@@ -18,6 +18,7 @@ export const auth = (req, res, next) => {
                         message: 'You are anonymous'
                     });
                 } else {
+                    console.log(data)
                     req.decoded = data;
                     next();
                 }

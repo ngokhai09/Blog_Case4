@@ -1,5 +1,5 @@
-const ACCESS_TOKEN = 'token'
-
+const ACCESS_TOKEN = 'token';
+const ID_USER = 'idUser';
 function showFormLogin() {
     let htmlLogin = `<div class="heading-page header-text">
     </div>
@@ -75,7 +75,9 @@ function login() {
         success: (token) => {
             if (token.token !== RESPONSE_FAIL) {
                 alert('Đăng nhập thành công')
-                localStorage.setItem(ACCESS_TOKEN, token.token)
+                localStorage.setItem(ACCESS_TOKEN, token.token);
+                localStorage.setItem(ID_USER, token.idUser);
+                showHome();
             } else {
                 alert('Sai tài khoản hoặc mật khẩu')
                 const notification = `<p style="color: #e05353">Sai tài khoản hoặc mật khẩu</p>`;

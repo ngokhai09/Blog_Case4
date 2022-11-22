@@ -19,6 +19,9 @@ exports.blogSchema = new mongoose_1.Schema({
         type: Number,
         ref: 'Account'
     },
+    status: Number,
+    description: String,
+    avatar: String,
     time_create: Date,
     time_update: Date,
     isActive: Boolean,
