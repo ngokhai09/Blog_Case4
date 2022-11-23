@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/src/blog/detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/src/blog/edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/routes/blog-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/blog-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/routes/blog-router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/blog-router.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/blog-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/blog-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/blog-router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/blog-router.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/blog-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/blog-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/src/blog/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/src/blog/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/src/blog/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +54,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "D:/Work/CodeGym/Code_Front/Module4/Blog_CMD4/src/views/src/blog",
+    "ts.external.directory.path": "D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\src\blog" />
       <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\image" />
       <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\routes" />
       <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\controller" />
       <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\service" />
-      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\assets\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\DuAn\Blog_Case4\src\views" />
@@ -107,7 +103,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -1,64 +1,77 @@
 async function showListBlog(id) {
     $("li").removeClass('active');
     $("#"+id).addClass('active');
-    let html = `    
-        <div class="heading-page header-text">
+    $('#body').html(`
+
+<div class="heading-page header-text">
+    </div>
+    <div class="main-banner header-text">
+        <div class="container-fluid">
+            <div class="owl-banner owl-carousel">
+               
             </div>
-            <section class="blog-posts grid-system">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-12">
+        </div>
+    </div>
+    <section class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main-content">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <span>Hãy chia sẻ với chúng tôi!</span>
+                                <h4>Thế giới này thuộc về bạn!</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="main-button">
+                                    <a rel="nofollow" href="https://templatemo.com/tm-551-stand-blog" target="_parent">Tải app ngay!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blog-posts">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="all-blog-posts">
-                      <div class="row">`;
-    let blogs = await getAll();
-    console.log(blogs)
-    for(let blog of blogs){
-        html += `<div class="col-lg-4" onclick="showDetail(${blog._id})">
+                        <div class="row" id="posts">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    `)
+    await getAll();
+}
+async function getAll(){
+    let html = '';
+    await $.ajax({
+        type: 'GET',
+        url: 'http://localhost:8080/blogs/user/'+localStorage.getItem('idUser'),
+        success: (blogs) => {
+            for(let blog of blogs){
+                html += `<div class="col-lg-4" onclick="showDetail(${blog._id})">
                           <div class="blog-post">
                             <div class="blog-thumb">
                               <img style="width: 350px; height: 404px" src="${blog.image}" alt="">
                             </div>
                             <div class="down-content">
-                              <span>Lifestyle</span>
+                              <span>${blog.title}</span>
                               <ul class="post-info">
                                 <li><a href="#">Admin</a></li>
                                 <li><a href="#">${new Date(blog.time_create).toLocaleString("en-US", {timeZone: "Asia/Jakarta"})}</a></li>
                                 <li><a href="#">${blog.commentCnt} Comments</a></li>
                               </ul>
-                              <div class="post-options">
-                                
-                              </div>
                             </div>
                           </div>
-                        </div>`
-    }
-
-    html += `
-                        
-                        <div class="col-lg-12">
-                          <ul class="page-numbers">
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>`;
-    $("#body").html(html);
-}
-async function getAll(){
-    let data1 = '';
-    await $.ajax({
-        type: 'GET',
-        url: 'http://localhost:8080/blogs/user/'+localStorage.getItem('idUser'),
-        success: (data) => {
-            data1 = data;
+                   </div>`
+            }
         }
     })
-    return data1;
+    $("#posts").html(html)
 }

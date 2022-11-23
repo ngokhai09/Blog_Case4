@@ -41,7 +41,7 @@ function showHome(id) {
                             <div id="posts">
                                
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12" id="all">
                                 <div class="main-button">
                                     <a href="blog.html">View All Posts</a>
                                 </div>
@@ -49,7 +49,7 @@ function showHome(id) {
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" id="nav">
                     <div class="sidebar">
                         <div class="row">
                             <div class="col-lg-12">
@@ -135,13 +135,12 @@ function getPosts() {
         },
         success: (posts) => {
             let htmlPosts = ``;
-            console.log(posts)
             for (const post of posts) {
                     htmlPosts += `
-                <div class="col-lg-12" onclick="showDetails(${post._id})">
+                <div class="col-lg-12" onclick="showDetail(${post._id})">
                                     <div class="blog-post">
                             <div class="blog-thumb">
-                              <img  src="${post.image}" alt="">
+                              <img style="height: 500px"  src="${post.image}" alt="">
                             </div>
                             <div class="down-content">
                               <span>${post.title}</span>
