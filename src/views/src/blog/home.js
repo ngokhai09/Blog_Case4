@@ -1,4 +1,4 @@
-showHome('home');
+// showHome('home');
 
 function showHome(id) {
     $("li").removeClass('active');

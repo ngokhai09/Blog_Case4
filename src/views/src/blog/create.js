@@ -2,15 +2,15 @@ function showFormCreate(id) {
     $("li").removeClass('active');
     $("#"+id).addClass('active');
     $('#body').html(`
-<div class="heading-page header-text">
+<div class="heading-page header-text" >
     </div>
     <section class="blog-post">
     <div class="EditorPage__content EditorPage__content--details">
         <div class="flex1 Paper Paper--double-padded">
-            <div><h1 class="PaperType--h2">BÀI ĐĂNG MỚI</h1>
-                <div class="FieldConfigurationField ">
-                    <div class="FieldConfiguration__label">Tiêu đề</div>
-                    <div class="FieldConfiguration__value"><input id="title" class="FieldConfiguration__input"
+            <div><h2>BÀI ĐĂNG MỚI</h2>
+                <div class="FieldConfigurationField content">
+                    <div class="FieldConfiguration__label" style="font-family: inherit;">Tiêu đề</div>
+                    <div class="FieldConfiguration__value"><input style="font-family: inherit;" id="title" class="FieldConfiguration__input"
                                                                   placeholder="Tên câu chuyện bạn muốn chia sẻ"
                     ></div>
                     <select class="custom-select custom-select-sm" id="status">
@@ -21,21 +21,21 @@ function showFormCreate(id) {
                     </select>
                 </div>
                 <div class="FieldConfigurationField ">
-                    <div class="FieldConfiguration__label">Nội Dung
+                    <div class="FieldConfiguration__label" style="font-family: inherit;">Nội Dung
                     </div>
-                    <div class="FieldConfiguration__value"><textarea id="content" class="FieldConfiguration__input"
+                    <div class="FieldConfiguration__value"><textarea id="content"
                                                                      rows="100"
                                                                      placeholder="Bạn muốn chia sẻ câu chuyên gì?"
                     ></textarea></div>
                 </div>
                 <div class="FieldConfigurationField false">
-                    <div class="FieldConfiguration__label">Ảnh bìa
+                    <div class="FieldConfiguration__label" style="font-family: inherit;">Ảnh bìa
                     </div>
                     <div class="FieldConfiguration__value">
                         <div class="col-sm-12 imgUp">
-                            <div class="imagePreview"></div>
+                            <div class="imagePreview" style="width: 100%"></div>
                             
-                            <label class="btn btn-primary">
+                            <label class="btn btn-primary ">
                                 Tải lên
                                 <input type="file" class="uploadFile img" id="image" 
                                        style="width: 0px;height: 0px; " hidden onchange="uploadCoverImage(event)">
@@ -43,9 +43,8 @@ function showFormCreate(id) {
                         </div><!-- col-2 -->
                     </div>
                 </div>
-                <button class="button" style="background-color: #f48840" onclick="addBlog()">
-                              <p style="color: black">Tạo</p>
-                              
+                <button class="main-button" style="background-color: #f48840; width: 100%" onclick="addBlog()" >
+                              Tạo
                             </button>
 
             </div>
@@ -59,7 +58,7 @@ function showFormCreate(id) {
         $('#content').summernote({
             placeholder: 'Câu chuyện của bạn là gì?',
             tabsize: 2,
-            height: 400
+            height: 250
         });
     })
 }
