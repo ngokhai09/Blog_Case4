@@ -10,7 +10,7 @@ class BlogService {
         return await Blog.create(blog);
     }
     findAll = async () => {
-        return Blog.find().populate('Account');
+        return Blog.find({status: {$eq: 2}}).populate('Account');
     }
     findById = async (id) => {
         return  Blog.findOne({_id: id});

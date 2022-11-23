@@ -1,4 +1,4 @@
-// showHome('home');
+showHome('home');
 
 function showHome(id) {
     $("li").removeClass('active');
@@ -95,24 +95,7 @@ function showHome(id) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="sidebar-item tags">
-                                    <div class="sidebar-heading">
-                                        <h2>Tag Clouds</h2>
-                                    </div>
-                                    <div class="content">
-                                        <ul>
-                                            <li><a href="#">Lifestyle</a></li>
-                                            <li><a href="#">Creative</a></li>
-                                            <li><a href="#">HTML5</a></li>
-                                            <li><a href="#">Inspiration</a></li>
-                                            <li><a href="#">Motivation</a></li>
-                                            <li><a href="#">PSD</a></li>
-                                            <li><a href="#">Responsive</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -148,7 +131,7 @@ function getPosts() {
                               <ul class="post-info">
                                 <li><a href="#">${post.Account.firstName}</a></li>
                                 <li><a href="#">${new Date(post.time_create).toLocaleString("en-US", {timeZone: "Asia/Jakarta"})}</a></li>
-                                <li><a href="#">${post.commentCnt} Comments</a></li>
+                                <li><a href="#">${post.commentCnt} Bình luận</a></li>
                               </ul>
                               <div class="post-options">
                                 
