@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controller/blog-controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/blog-router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/blog-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/library/assets/css/myCss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/library/assets/js/myScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/library/image/banner-item-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/src/blog/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog-category.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog-category.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog-category.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog-category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog-category.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog-category.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/like.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/like.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/like.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/router.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/blog-category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/blog-category.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/blog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/blog.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/image.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/src/account/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/account/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/test.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="register" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HiDrgMS9V54WLM7gC56j5PdJpk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;394847&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Work/CodeGym/Code_Front/Module4/Blog_CMD4/src/views/library/image&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\image" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\routes" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\controller" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\service" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\assets\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\DuAn\Blog_Case4\src\views" />
+      <recent name="C:\DuAn\Blog_Case4\src\views\src\account" />
+      <recent name="C:\DuAn\Blog_Case4\src\views\templates" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="" />
+      <created>1668759211744</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668759211744</updated>
+      <workItem from="1668759213671" duration="1960000" />
+      <workItem from="1668878743161" duration="8852000" />
+      <workItem from="1668930700515" duration="9826000" />
+      <workItem from="1668958170250" duration="4041000" />
+      <workItem from="1668993481281" duration="762000" />
+      <workItem from="1668994264324" duration="309000" />
+      <workItem from="1668998348986" duration="18000" />
+      <workItem from="1669083080642" duration="4962000" />
+      <workItem from="1669114128909" duration="15270000" />
+      <workItem from="1669165176092" duration="696000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

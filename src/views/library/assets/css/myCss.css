@@ -1,0 +1,251 @@
+.EditorPage__detailspreviewimage {
+    width: 385px;
+    height: 240px;
+    background: #fff;
+    border: 1px solid #ddd;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.EditorPage__content {
+    width: 1076px;
+    padding: 54px 18px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.EditorPage__content--details {
+    display: flex;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.Paper.Paper--double-padded {
+    padding: 36px;
+}
+
+.Paper {
+    background: #fff;
+    box-shadow: 0 2px 12px -3px rgb(0 0 0 / 10%);
+    border-radius: 16px;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+body {
+    font-size: 18px;
+    line-height: 25.2px;
+    font-weight: 400;
+    color: #05283c;
+    overscroll-behavior-y: contain;
+}
+
+.EditorPage__detailspreview {
+    width: 385px;
+    margin-left: 60px;
+}
+
+.PaperType--h2 {
+    font-weight: 400;
+    font-family: 'BR Sonoma';
+    margin: 0;
+    color: #05283c;
+    margin-bottom: 18px;
+}
+
+h2 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+.FieldConfigurationField:not(.FieldConfigurationField--half) {
+    margin-bottom: 36px;
+}
+
+.FieldConfigurationField {
+    width: 100%;
+}
+
+.FieldConfiguration__label {
+    font-family: 'Work Sans', Georgia, serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #05283c;
+}
+
+.FieldConfiguration__value, .FieldConfiguration__label {
+    margin: 9px 0;
+}
+
+.FieldConfiguration__input {
+    width: 100%;
+    background-color: var(--grey-light, #f8f8f8);
+    border: 0;
+    padding: 0 15px;
+    font-size: 16px;
+    font-family: 'Work Sans';
+    font-weight: 300;
+    outline: 0;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.FieldConfigurationField__i {
+    display: inline-block;
+    color: #e3bfab;
+    position: relative;
+    cursor: pointer;
+}
+
+.FieldConfigurationField__i svg {
+    width: 20px;
+    height: 20px;
+}
+
+.FieldConfigurationField__description {
+    position: absolute;
+    left: calc(100%);
+    padding-left: 0;
+    top: -189px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    min-width: 500px;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: 0 50%;
+    transition: all 0.2s;
+}
+
+.FieldConfigurationField__descriptioninner {
+    padding: 17px 24px;
+    color: #dc785a;
+    box-shadow: 0 2px 21px 0 rgb(0 0 0 / 11%);
+    border-radius: 100px;
+    pointer-events: all;
+    font-size: 13px;
+    line-height: 16px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    height: 100%;
+}
+
+.File > span.btn-raised.btn-default {
+    background-color: 'var(--grey-light, #f8f8f8)';
+}
+
+.btn-raised.btn-default {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn-raised {
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #999;
+    z-index: 2;
+    position: relative;
+    border: 0;
+    border-radius: 3px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    box-shadow: 0 2px 6px -2px rgb(0 0 0 / 50%);
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.1s;
+    outline: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.imagePreview {
+    background-size: contain;
+    width: 100%;
+    height: 500px;
+    background-position: center center;
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    display: block;
+    border-radius: 0px;
+    box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.2);
+    margin-top: -5px;
+}
+
+.imgUp {
+    margin-bottom: 15px;
+}
+
+.del {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.imgAdd {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #4bd7ef;
+    color: #fff;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 30px;
+    margin-top: 0px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.submit {
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Roboto, sans-serif, "Helvetica Neue", Helvetica, Roboto, sans-serif;
+}
+
+.submit {
+    position: relative;
+    z-index: 10;
+}
+
+.button {
+    font-family: 'Pacifico';
+    overflow: visible;
+    border-radius: 3px;
+    position: relative;
+    padding-right: 30px;
+    background-color: #14ca38;
+    color: #4d1b1b !important;
+    display: block;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+}

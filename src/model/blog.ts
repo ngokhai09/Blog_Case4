@@ -3,17 +3,16 @@ import AutoIncrementFactory from 'mongoose-sequence'
 
 import mongoose from "mongoose";
 import { ICategory } from "./categories";
-import { IImage } from "./image";
 import { IAccount } from "./account";
 export interface IBlog{
     _id?: number;
     content?:string;
     title?: string;
-    Image?:IImage;
+    image?: string;
     Account?: IAccount;
     time_create?:Date;
     time_update?:Date;
-    isActive?:boolean;
+    status?:boolean;
     likeCnt?: number;
     commentCnt?: number;
 }
@@ -21,17 +20,14 @@ export let blogSchema = new Schema<IBlog>({
     _id: Number,
     content: String,
     title: String,
-    Image:{
-        type: Number,
-        ref: 'Image'
-    },
+   image: String,
     Account:{
         type: Number,
         ref: 'Account'
     },
     time_create: Date,
     time_update:Date,
-    isActive: Boolean,
+    status: Boolean,
     likeCnt: Number,
     commentCnt: Number
 })
