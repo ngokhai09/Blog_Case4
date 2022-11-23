@@ -11,10 +11,7 @@ exports.blogSchema = new mongoose_1.Schema({
     _id: Number,
     content: String,
     title: String,
-    Image: {
-        type: Number,
-        ref: 'Image'
-    },
+    image: String,
     Account: {
         type: Number,
         ref: 'Account'
@@ -24,7 +21,7 @@ exports.blogSchema = new mongoose_1.Schema({
     avatar: String,
     time_create: Date,
     time_update: Date,
-    isActive: Boolean,
+    status: Boolean,
     likeCnt: Number,
     commentCnt: Number
 });

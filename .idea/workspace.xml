@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01db310f-bd6e-45bc-97a7-af77292a3d44" name="Changes" comment="">
+    <list default="true" id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controller/blog-controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/blog-router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/blog-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/library/assets/css/myCss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/library/assets/js/myScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/library/image/banner-item-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/src/blog/list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-category-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-category-service.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-category-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-category-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-category-service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-category-service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog-category.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog-category.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog-category.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog-category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog-category.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog-category.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/like.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/like.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/model/like.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/router.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/blog-category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/blog-category.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/blog-category-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/blog-category-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/blog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/blog.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/image.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/library/assets/js/accordions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/library/assets/js/accordions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/blog/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/test-filebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/testHtml/test-filebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/templates/templatemo_551_stand_blog/assets/js/accordions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/templatemo_551_stand_blog/assets/js/accordions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/testHtml/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/testLinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/testHtml/testLinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/src/account/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/account/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +37,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -57,26 +69,29 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mongo" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/library/image" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="C:\DuAn\Blog_Case4\node_modules\typescript\lib" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;394847&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Work/CodeGym/Code_Front/Module4/Blog_CMD4/src/views/library/image&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\DuAn\Blog_Case4\src\views\library\image" />
-      <recent name="C:\DuAn\Blog_Case4\src\views\templates\libary" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\image" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\routes" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\controller" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\service" />
+      <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\assets\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\DuAn\Blog_Case4\src\views\test" />
       <recent name="C:\DuAn\Blog_Case4\src\views" />
       <recent name="C:\DuAn\Blog_Case4\src\views\src\account" />
       <recent name="C:\DuAn\Blog_Case4\src\views\templates" />
@@ -85,7 +100,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="01db310f-bd6e-45bc-97a7-af77292a3d44" name="Changes" comment="" />
+      <changelist id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="" />
       <created>1668759211744</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -96,8 +111,10 @@
       <workItem from="1668958170250" duration="4041000" />
       <workItem from="1668993481281" duration="762000" />
       <workItem from="1668994264324" duration="309000" />
-      <workItem from="1669067795209" duration="22433000" />
-      <workItem from="1669157993850" duration="4644000" />
+      <workItem from="1668998348986" duration="18000" />
+      <workItem from="1669083080642" duration="4962000" />
+      <workItem from="1669114128909" duration="15270000" />
+      <workItem from="1669165176092" duration="696000" />
     </task>
     <servers />
   </component>

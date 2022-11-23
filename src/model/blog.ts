@@ -2,42 +2,32 @@ import { Schema, model} from "mongoose";
 import AutoIncrementFactory from 'mongoose-sequence'
 
 import mongoose from "mongoose";
-import { IImage } from "./image";
+import { ICategory } from "./categories";
 import { IAccount } from "./account";
 export interface IBlog{
     _id?: number;
     content?:string;
     title?: string;
-    Image?:IImage;
-    //chế độ bài blog : 0_private , 1_public, 2_friends
-    status: number;
+    image?: string;
     Account?: IAccount;
     time_create?:Date;
-    avatar: string,
     time_update?:Date;
-    isActive?:boolean;
+    status?:boolean;
     likeCnt?: number;
-    description: string;
     commentCnt?: number;
 }
 export let blogSchema = new Schema<IBlog>({
     _id: Number,
     content: String,
     title: String,
-    Image:{
-        type: Number,
-        ref: 'Image'
-    },
+   image: String,
     Account:{
         type: Number,
         ref: 'Account'
     },
-    status: Number,
-    description: String,
-    avatar: String,
     time_create: Date,
     time_update:Date,
-    isActive: Boolean,
+    status: Boolean,
     likeCnt: Number,
     commentCnt: Number
 })

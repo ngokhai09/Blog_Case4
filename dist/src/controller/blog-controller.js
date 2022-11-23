@@ -6,14 +6,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const blog_service_1 = __importDefault(require("../service/blog-service"));
 class BlogController {
     constructor() {
-        this.save = async (req, res) => {
+        this.store = async (req, res) => {
             let blog = req.body;
-            blog = await blog_service_1.default.save(blog);
+            blog = await blog_service_1.default.addBlog(blog);
             return res.status(201).json(blog);
         };
-        this.findAll = async (req, res) => {
+        this.index = async (req, res) => {
             let blogs = await blog_service_1.default.findAll();
             return res.status(201).json(blogs);
+        };
+        this.show = async (req, res) => {
+            let id = req.params.id;
+            let blog = await blog_service_1.default.findById(id);
+            return res.status(201).json(blog);
+        };
+        this.destroy = async (req, res) => {
+        };
+        this.update = async (req, res) => {
         };
     }
 }
