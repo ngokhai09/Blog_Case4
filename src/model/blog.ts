@@ -2,7 +2,7 @@ import { Schema, model} from "mongoose";
 import AutoIncrementFactory from 'mongoose-sequence'
 
 import mongoose from "mongoose";
-import { ICategory } from "./categories";
+import {Category, ICategory} from "./categories";
 import { IAccount } from "./account";
 export interface IBlog{
     _id?: number;
@@ -15,6 +15,7 @@ export interface IBlog{
     status?:number;
     likeCnt?: number;
     commentCnt?: number;
+    Category: ICategory;
 }
 export let blogSchema = new Schema<IBlog>({
     _id: Number,
@@ -29,7 +30,11 @@ export let blogSchema = new Schema<IBlog>({
     time_update:Date,
     status: Number,
     likeCnt: Number,
-    commentCnt: Number
+    commentCnt: Number,
+    Category: {
+        type: Number,
+        ref: 'Category'
+    }
 })
 const AutoIncrement = AutoIncrementFactory(mongoose);
 

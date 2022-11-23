@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const blog_service_1 = __importDefault(require("../service/blog-service"));
+const blog_1 = require("../model/blog");
 class BlogController {
     constructor() {
         this.store = async (req, res) => {
@@ -12,8 +13,21 @@ class BlogController {
             return res.status(201).json(blog);
         };
         this.index = async (req, res) => {
-            let blogs = await blog_service_1.default.findAll();
-            return res.status(201).json(blogs);
+            let limit = 3;
+            let offset = 0;
+            let page = 1;
+            if (req.query.page) {
+                page = +req.query.page;
+                offset = (+page - 1) * limit;
+            }
+            let totalBlogs = await blog_1.Blog.countDocuments({});
+            let totalPage = Math.ceil(totalBlogs / totalBlogs);
+            let blogs = await blog_service_1.default.findAll(limit, offset);
+            return res.status(201).json({
+                blogs: blogs,
+                currentPage: page,
+                totalPage: totalPage
+            });
         };
         this.show = async (req, res) => {
             let id = req.params.id;
@@ -24,8 +38,12 @@ class BlogController {
         };
         this.update = async (req, res) => {
         };
-        this.findByUser = async (req, res, Response) => {
+        this.findByUser = async (req, res) => {
             let blogs = await blog_service_1.default.findByUser(req.params.id);
+            return res.status(201).json(blogs);
+        };
+        this.findTop4 = async (req, res) => {
+            let blogs = await blog_service_1.default.findTop4();
             return res.status(201).json(blogs);
         };
     }

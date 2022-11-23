@@ -1,6 +1,6 @@
 function showFormCreate(id) {
     $("li").removeClass('active');
-    $("#"+id).addClass('active');
+    $("#" + id).addClass('active');
     $('#body').html(`
 <div class="heading-page header-text" >
     </div>
@@ -10,18 +10,29 @@ function showFormCreate(id) {
             <div><h2>BÀI ĐĂNG MỚI</h2>
                 <div class="FieldConfigurationField content">
                     <div class="FieldConfiguration__label" style="font-family: inherit;">Tiêu đề</div>
-                    <div class="FieldConfiguration__value"><input style="font-family: inherit;" id="title" class="FieldConfiguration__input"
+                    <div class="FieldConfiguration__value"><input style="font-family: inherit;" id="title" 
                                                                   placeholder="Tên câu chuyện bạn muốn chia sẻ"
                     ></div>
-                    <select class="custom-select custom-select-sm" id="status">
-                      <option selected>Trạng thái</option>
-                      <option value="1">Tất cả mọi người</option>
-                      <option value="2">Chỉ mình tôi</option>
-                      <option value="3">Bạn bè</option>
-                    </select>
+                    <div class="content">
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12">
+                              <select class="custom-select custom-select-sm" id="status">
+                                  <option selected>Trạng thái</option>
+                                  <option value="2">Tất cả mọi người</option>
+                                  <option value="1">Chỉ mình tôi</option>
+                                </select>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <select class="custom-select custom-select-sm" id="categoryCreate">
+                                  <option selected>Chủ đề</option>
+                                </select>
+                          </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="FieldConfigurationField ">
-                    <div class="FieldConfiguration__label" style="font-family: inherit;">Nội Dung
+                    <div class="FieldConfiguration__label" style="font-family: inherit;">Nội dung
                     </div>
                     <div class="FieldConfiguration__value"><textarea id="content"
                                                                      rows="100"
@@ -54,26 +65,31 @@ function showFormCreate(id) {
     </div>
 </section>
     `)
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#content').summernote({
             placeholder: 'Câu chuyện của bạn là gì?',
             tabsize: 2,
             height: 250
         });
     })
+    getCategoriesCreate();
 }
-function addBlog(){
+
+function addBlog() {
     let title = $("#title").val();
     let content = $("#content").val();
     let image = localStorage.getItem('coverImage');
     let status = $('#status').val();
-    let blog= {
-        "title" : title,
-        "content" : content,
-        "image" : image,
-        "Account":localStorage.getItem(ID_USER)
-        ,
-        "status": +status
+    let Category = $('#categoryCreate').val()
+    let blog = {
+        "title": title,
+        "content": content,
+        "image": image,
+        "Account": localStorage.getItem(ID_USER),
+        "status": +status,
+        "Category": {
+            _id: Category
+        }
     }
     console.log(blog)
     $.ajax({
@@ -85,6 +101,7 @@ function addBlog(){
         },
         success: (data) => {
             alert("Đăng bài thành công");
+            showHome();
         }
     })
 }
@@ -120,4 +137,24 @@ function uploadCoverImage(e) {
             let downloadURL = uploadTask.snapshot.downloadURL;
             localStorage.setItem('coverImage', downloadURL);
         });
+}
+
+function getCategoriesCreate() {
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:8080/categories',
+        headers: {
+            'Content-Type': 'application/json',
+            // Authorization: 'Bearer ' + localStorage.getItem(ACCESS_TOKEN)
+        },
+        success: (categories) => {
+            let htmlCategories = ``;
+            for (const category of categories) {
+                htmlCategories += `
+                    <option value=${category._id}>${category.name}</option>
+                `
+            }
+            $('#categoryCreate').html(htmlCategories);
+        }
+    })
 }

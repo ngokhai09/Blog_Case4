@@ -1,5 +1,5 @@
+let page  = 1
 showHome('home');
-
 function showHome(id) {
     $("li").removeClass('active');
     $("#"+id).addClass('active');
@@ -43,7 +43,7 @@ function showHome(id) {
                             </div>
                             <div class="col-lg-12">
                                 <div class="main-button">
-                                    <a href="blog.html">View All Posts</a>
+                                    <a onclick="getPosts()" style="color: white">Xem thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ function showHome(id) {
                             <div class="col-lg-12">
                                 <div class="sidebar-item search">
                                     <form id="search_form" name="gs" method="GET" action="#">
-                                        <input type="text" name="q" class="searchText" placeholder="type to search..."
+                                        <input type="text" name="q" class="searchText" placeholder="tìm kiếm..."
                                                autocomplete="on">
                                     </form>
                                 </div>
@@ -66,19 +66,8 @@ function showHome(id) {
                                         <h2>Top bài viết</h2>
                                     </div>
                                     <div class="content">
-                                        <ul>
-                                            <li><a href="post-details.html">
-                                                <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
-                                                <span>May 31, 2020</span>
-                                            </a></li>
-                                            <li><a href="post-details.html">
-                                                <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
-                                                <span>May 28, 2020</span>
-                                            </a></li>
-                                            <li><a href="post-details.html">
-                                                <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
-                                                <span>May 14, 2020</span>
-                                            </a></li>
+                                        <ul id="blogsTop5">
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -105,21 +94,27 @@ function showHome(id) {
     `)
     getPosts()
     getCategories()
+    getTop5()
 }
 
-//chưa xong
+
 function getPosts() {
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:8080/blogs',
+        url: 'http://localhost:8080/blogs?page='+ page,
         headers: {
             'Content-Type': 'application/json',
             // Authorization: 'Bearer ' + localStorage.getItem(ACCESS_TOKEN)
         },
         success: (posts) => {
+            if(posts.totalPage < page){
+                page = 1;
+            } else {
+                page++;
+            }
             let htmlPosts = ``;
-            console.log(posts)
-            for (const post of posts) {
+            console.log('post',posts)
+            for (const post of posts.blogs) {
                     htmlPosts += `
                 <div class="col-lg-12" onclick="showDetails(${post._id})">
                                     <div class="blog-post">
@@ -162,6 +157,30 @@ function getCategories() {
                 `
             }
             $('#categories').html(htmlCategories);
+        }
+    })
+}
+
+function getTop5() {
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:8080/blogs/search/top5',
+        headers: {
+            'Content-Type': 'application/json',
+            // Authorization: 'Bearer ' + localStorage.getItem(ACCESS_TOKEN)
+        },
+        success: (blogs) => {
+            console.log(blogs)
+            let htmlBlogs = ``;
+            for (const blog of blogs) {
+                htmlBlogs += `
+                    <li><a>
+                        <h5>${blog.title}</h5>
+                        <span>${new Date(blog.time_create).toLocaleString("en-US", {timeZone: "Asia/Jakarta"})}</span>
+                    </a></li>
+                `
+            }
+            $('#blogsTop5').html(htmlBlogs);
         }
     })
 }
