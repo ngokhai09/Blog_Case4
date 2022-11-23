@@ -4,12 +4,12 @@ const blog_category_1 = require("../model/blog-category");
 class BlogCategoryService {
     constructor() {
         this.findAll = async () => {
-            let categories = await blog_category_1.Category.find().populate({ path: 'Blog', match: { status: { $eq: 1 } } })
+            let categories = blog_category_1.BlogCategory.find().populate({ path: 'Blog', match: { status: { $eq: 1 } } })
                 .populate({ path: 'Category' });
             return categories;
         };
         this.save = async (category) => {
-            return await blog_category_1.Category.create(category);
+            return await blog_category_1.BlogCategory.create(category);
         };
     }
 }

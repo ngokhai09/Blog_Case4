@@ -26,7 +26,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Category = void 0;
+exports.BlogCategory = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
 const mongoose_sequence_1 = __importDefault(require("mongoose-sequence"));
 let blogCategorySchema = new mongoose_1.Schema({
@@ -43,5 +43,5 @@ let blogCategorySchema = new mongoose_1.Schema({
 const AutoIncrement = (0, mongoose_sequence_1.default)(mongoose_1.default);
 blogCategorySchema.plugin(AutoIncrement, { id: 'blog_category_counter', inc_field: '_id' });
 const BlogCategory = (0, mongoose_1.model)('BlogCategory', blogCategorySchema);
-exports.Category = BlogCategory;
+exports.BlogCategory = BlogCategory;
 //# sourceMappingURL=blog-category.js.map

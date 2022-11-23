@@ -3,20 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="01db310f-bd6e-45bc-97a7-af77292a3d44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/account-controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/account-controller.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/account-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/account-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/account-controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/account-controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/routes/account-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/account-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/routes/account-router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/account-router.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/account-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/account-service.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/account-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/account-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/account-service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/account-service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-category-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-category-service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-category-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-category-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-category-service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-category-service.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/account-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/account-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/account-router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/account-router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/account-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/account-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/blog-category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/blog-category.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/blog-category-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/blog-category-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/account/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/account/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/library/assets/js/accordions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/library/assets/js/accordions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/src/blog/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/src/test-filebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/testHtml/test-filebase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/templates/templatemo_551_stand_blog/assets/js/accordions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/templates/templatemo_551_stand_blog/assets/js/accordions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/testHtml/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/testLinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/testHtml/testLinh.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +76,7 @@
       <recent name="C:\DuAn\Blog_Case4\src\views\templates\libary" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\DuAn\Blog_Case4\src\views\test" />
       <recent name="C:\DuAn\Blog_Case4\src\views" />
       <recent name="C:\DuAn\Blog_Case4\src\views\src\account" />
       <recent name="C:\DuAn\Blog_Case4\src\views\templates" />
@@ -97,7 +97,7 @@
       <workItem from="1668993481281" duration="762000" />
       <workItem from="1668994264324" duration="309000" />
       <workItem from="1669067795209" duration="22433000" />
-      <workItem from="1669157993850" duration="2009000" />
+      <workItem from="1669157993850" duration="4644000" />
     </task>
     <servers />
   </component>
