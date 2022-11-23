@@ -11,6 +11,8 @@ export interface IBlog {
     time_create?: Date;
     time_update?: Date;
     isActive?: boolean;
+    likeCnt?: number;
+    commentCnt?: number;
 }
 export declare let blogSchema: Schema<IBlog, mongoose.Model<IBlog, any, any, any, any>, {}, {}, {}, {}, "type", IBlog>;
 declare const Blog: mongoose.Model<IBlog, {}, {}, {}, any>;

@@ -21,7 +21,9 @@ exports.blogSchema = new mongoose_1.Schema({
     },
     time_create: Date,
     time_update: Date,
-    isActive: Boolean
+    isActive: Boolean,
+    likeCnt: Number,
+    commentCnt: Number
 });
 const AutoIncrement = (0, mongoose_sequence_1.default)(mongoose_2.default);
 exports.blogSchema.plugin(AutoIncrement, { id: 'blog_counter', inc_field: '_id' });
