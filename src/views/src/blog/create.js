@@ -68,7 +68,7 @@ function addBlog(){
     }
     $.ajax({
         type: 'POST',
-        url: 'http://localhost:8080/blog',
+        url: 'http://localhost:8080/blogs',
         data: JSON.stringify(blog),
         headers: {
             'Content-Type': 'application/json'
