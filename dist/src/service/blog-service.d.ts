@@ -8,9 +8,9 @@ declare class BlogService {
     findById: (id: any) => Promise<import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
         _id: number;
     }>>;
-    findByUser: (userId: any) => Promise<(import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
+    findByUser: (userId: any) => Promise<Omit<import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
         _id: number;
-    }>)[]>;
+    }>, never>[]>;
     updateBlog: (id: any, newBlog: any) => Promise<any>;
     delete: (id: any) => Promise<boolean>;
 }
