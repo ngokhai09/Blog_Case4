@@ -55,7 +55,7 @@ async function getAll(){
     let data1 = '';
     await $.ajax({
         type: 'GET',
-        url: 'http://localhost:8080/blogs',
+        url: 'http://localhost:8080/blogs/user/'+localStorage.getItem('idUser'),
         success: (data) => {
             data1 = data;
         }

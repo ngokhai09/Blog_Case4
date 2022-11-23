@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_2022_8_31_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_2022_8_31_AM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/src/blog/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/account/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/account/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/account/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/account/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/account/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/account/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/blog/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/blog-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/blog-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/blog-router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/blog-router.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/blog-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/blog-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/blog-router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/blog-router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/blog-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/blog-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/src/blog/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/src/blog/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/list.js" afterDir="false" />
     </list>
@@ -53,11 +59,11 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ts.external.directory.path": "D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\image" />

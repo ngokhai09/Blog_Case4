@@ -16,7 +16,7 @@ class BlogService {
         return  Blog.findOne({_id: id});
     }
     findByUser = async (userId) => {
-        return  Blog.find({User: userId});
+        return  Blog.find({Account: Number(userId)}).populate("Account");
     }
     updateBlog = async (id, newBlog) => {
         let blog = Blog.findOne({_id: id});

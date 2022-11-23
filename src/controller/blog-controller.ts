@@ -23,6 +23,10 @@ class BlogController {
     update = async (req: Request, res: Response)=>{
 
     }
+    findByUser = async (req: Request, res, Response)=>{
+        let blogs =await blogService.findByUser(req.params.id);
+        return res.status(201).json(blogs);
+    }
 }
 
 export default new BlogController();
