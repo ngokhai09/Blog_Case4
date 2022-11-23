@@ -11,11 +11,11 @@ class BlogService {
             blog.time_update = Date.now();
             return await blog_1.Blog.create(blog);
         };
-        this.findAll = async () => {
-            return blog_1.Blog.find({ status: { $eq: 2 } }).populate('Account');
+        this.findAll = async (limit, offset) => {
+            return blog_1.Blog.find({ status: { $eq: 2 } }).populate('Account').limit(limit).skip(offset);
         };
         this.findById = async (id) => {
-            return blog_1.Blog.findOne({ _id: id }).populate("Account");
+            return blog_1.Blog.findOne({ _id: id });
         };
         this.findByUser = async (userId) => {
             return blog_1.Blog.find({ Account: Number(userId) }).populate("Account");
@@ -33,6 +33,9 @@ class BlogService {
             }
             blog.remove();
             return true;
+        };
+        this.findTop4 = async () => {
+            return await blog_1.Blog.find().sort({ commentCnt: -1 }).limit(4);
         };
     }
 }

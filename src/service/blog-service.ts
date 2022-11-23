@@ -9,8 +9,8 @@ class BlogService {
         blog.time_update = Date.now();
         return await Blog.create(blog);
     }
-    findAll = async () => {
-        return Blog.find({status: {$eq:2}}).populate('Account');
+    findAll = async (limit, offset) => {
+        return Blog.find({status: {$eq: 2}}).populate('Account').limit(limit).skip(offset);
     }
     findById = async (id) => {
         return  Blog.findOne({_id: id}).populate("Account");
@@ -31,6 +31,9 @@ class BlogService {
         }
         blog.remove();
         return true;
+    }
+    findTop4 = async () => {
+        return await Blog.find().sort({commentCnt : -1}).limit(4);
     }
 }
 

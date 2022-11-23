@@ -20,7 +20,11 @@ exports.blogSchema = new mongoose_1.Schema({
     time_update: Date,
     status: Number,
     likeCnt: Number,
-    commentCnt: Number
+    commentCnt: Number,
+    Category: {
+        type: Number,
+        ref: 'Category'
+    }
 });
 const AutoIncrement = (0, mongoose_sequence_1.default)(mongoose_2.default);
 exports.blogSchema.plugin(AutoIncrement, { id: 'blog_counter', inc_field: '_id' });

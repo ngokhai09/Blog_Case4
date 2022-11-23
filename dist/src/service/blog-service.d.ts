@@ -2,7 +2,7 @@ declare class BlogService {
     addBlog: (blog: any) => Promise<import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
         _id: number;
     }>>;
-    findAll: () => Promise<Omit<import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
+    findAll: (limit: any, offset: any) => Promise<Omit<import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
         _id: number;
     }>, never>[]>;
     findById: (id: any) => Promise<import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
@@ -13,6 +13,9 @@ declare class BlogService {
     }>, never>[]>;
     updateBlog: (id: any, newBlog: any) => Promise<any>;
     delete: (id: any) => Promise<boolean>;
+    findTop4: () => Promise<(import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
+        _id: number;
+    }>)[]>;
 }
 declare const _default: BlogService;
 export default _default;
