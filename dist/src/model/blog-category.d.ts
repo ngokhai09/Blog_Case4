@@ -7,4 +7,4 @@ export interface IBlogCategory {
     Category?: ICategory;
 }
 declare const BlogCategory: mongoose.Model<IBlogCategory, {}, {}, {}, any>;
-export { BlogCategory as Category };
+export { BlogCategory };

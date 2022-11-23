@@ -7,10 +7,10 @@ function checkNavbar() {
                             <a class="nav-link" href="index.html">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Tạo bài viết</a>
+                            <a class="nav-link" onclick="showFormCreate(this)">Tạo bài viết</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Bài viết của tôi</a>
+                            <a class="nav-link" onclick="showListBlog(this)">Bài viết của tôi</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link">Tài Khoản</a>

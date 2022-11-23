@@ -25,4 +25,4 @@ const AutoIncrement = AutoIncrementFactory(mongoose);
 blogCategorySchema.plugin(AutoIncrement,{id:'blog_category_counter',inc_field: '_id'});
 
 const BlogCategory = model<IBlogCategory>('BlogCategory', blogCategorySchema);
-export {BlogCategory as Category};
+export {BlogCategory};

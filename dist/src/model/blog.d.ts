@@ -1,16 +1,15 @@
 import { Schema } from "mongoose";
 import mongoose from "mongoose";
-import { IImage } from "./image";
 import { IAccount } from "./account";
 export interface IBlog {
     _id?: number;
     content?: string;
     title?: string;
-    Image?: IImage;
+    image?: string;
     Account?: IAccount;
     time_create?: Date;
     time_update?: Date;
-    isActive?: boolean;
+    status?: boolean;
     likeCnt?: number;
     commentCnt?: number;
 }
