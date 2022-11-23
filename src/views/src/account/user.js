@@ -174,6 +174,7 @@ function updateUser() {
             $('#phone').val(user.phone);
             $('#imagePreview').css('background-image', 'url(' + user.avatar + ')');
             localStorage.setItem('avatar', user.avatar);
+            localStorage.setItem('coverImage', '');
         }
     })
 }

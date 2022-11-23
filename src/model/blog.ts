@@ -12,7 +12,7 @@ export interface IBlog{
     Account?: IAccount;
     time_create?:Date;
     time_update?:Date;
-    status?:boolean;
+    status?:number;
     likeCnt?: number;
     commentCnt?: number;
 }
@@ -27,7 +27,7 @@ export let blogSchema = new Schema<IBlog>({
     },
     time_create: Date,
     time_update:Date,
-    status: Boolean,
+    status: Number,
     likeCnt: Number,
     commentCnt: Number
 })

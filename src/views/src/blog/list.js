@@ -16,11 +16,10 @@ async function showListBlog(id) {
         html += `<div class="col-lg-4" onclick="showDetail(${blog._id})">
                           <div class="blog-post">
                             <div class="blog-thumb">
-                              <img src="library/image/${blog.Image.link}" alt="">
+                              <img style="width: 350px; height: 404px" src="${blog.image}" alt="">
                             </div>
                             <div class="down-content">
                               <span>Lifestyle</span>
-                              <a href="post-details.html"><h4>${blog.content}</h4></a>
                               <ul class="post-info">
                                 <li><a href="#">Admin</a></li>
                                 <li><a href="#">${new Date(blog.time_create).toLocaleString("en-US", {timeZone: "Asia/Jakarta"})}</a></li>

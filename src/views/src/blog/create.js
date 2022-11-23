@@ -13,6 +13,12 @@ function showFormCreate(id) {
                     <div class="FieldConfiguration__value"><input id="title" class="FieldConfiguration__input"
                                                                   placeholder="Tên câu chuyện bạn muốn chia sẻ"
                     ></div>
+                    <select class="custom-select custom-select-sm" id="status">
+                      <option selected>Trạng thái</option>
+                      <option value="1">Tất cả mọi người</option>
+                      <option value="2">Chỉ mình tôi</option>
+                      <option value="3">Bạn bè</option>
+                    </select>
                 </div>
                 <div class="FieldConfigurationField ">
                     <div class="FieldConfiguration__label">Nội Dung
@@ -32,13 +38,13 @@ function showFormCreate(id) {
                             <label class="btn btn-primary">
                                 Tải lên
                                 <input type="file" class="uploadFile img" id="image" 
-                                       style="width: 0px;height: 0px; " hidden>
+                                       style="width: 0px;height: 0px; " hidden onchange="uploadCoverImage(event)">
                             </label>
                         </div><!-- col-2 -->
                     </div>
                 </div>
-                <button class="button" onclick="addBlog()">
-                              <p>Tạo</p>
+                <button class="button" style="background-color: #f48840" onclick="addBlog()">
+                              <p style="color: black">Tạo</p>
                               
                             </button>
 
@@ -60,12 +66,17 @@ function showFormCreate(id) {
 function addBlog(){
     let title = $("#title").val();
     let content = $("#content").val();
-    let image = $("#image").val().split("\\");
+    let image = localStorage.getItem('coverImage');
+    let status = $('#status').val();
     let blog= {
         "title" : title,
         "content" : content,
-        "image" : image[image.length - 1]
+        "image" : image,
+        "Account":localStorage.getItem(ID_USER)
+        ,
+        "status": +status
     }
+    console.log(blog)
     $.ajax({
         type: 'POST',
         url: 'http://localhost:8080/blogs',
@@ -77,4 +88,37 @@ function addBlog(){
             alert("Đăng bài thành công");
         }
     })
+}
+
+function uploadCoverImage(e) {
+    let fbBucketName = 'images';
+    let uploader = document.getElementById('uploader');
+    let file = e.target.files[0];
+    let storageRef = firebase.storage().ref(`${fbBucketName}/${file.name}`);
+    let uploadTask = storageRef.put(file);
+    uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
+        function (snapshot) {
+            let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            uploader.value = progress;
+            switch (snapshot.state) {
+                case firebase.storage.TaskState.PAUSED:
+                    break;
+                case firebase.storage.TaskState.RUNNING:
+                    break;
+            }
+        }, function (error) {
+            switch (error.code) {
+                case 'storage/unauthorized':
+                    break;
+
+                case 'storage/canceled':
+                    break;
+
+                case 'storage/unknown':
+                    break;
+            }
+        }, function () {
+            let downloadURL = uploadTask.snapshot.downloadURL;
+            localStorage.setItem('coverImage', downloadURL);
+        });
 }

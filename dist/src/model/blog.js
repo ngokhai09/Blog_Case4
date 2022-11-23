@@ -18,7 +18,7 @@ exports.blogSchema = new mongoose_1.Schema({
     },
     time_create: Date,
     time_update: Date,
-    status: Boolean,
+    status: Number,
     likeCnt: Number,
     commentCnt: Number
 });

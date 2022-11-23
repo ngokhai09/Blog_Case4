@@ -9,7 +9,7 @@ export interface IBlog {
     Account?: IAccount;
     time_create?: Date;
     time_update?: Date;
-    status?: boolean;
+    status?: number;
     likeCnt?: number;
     commentCnt?: number;
 }
