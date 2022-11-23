@@ -1,4 +1,6 @@
-function showUser() {
+function showUser(id) {
+    $("li").removeClass('active');
+    $("#"+id).addClass('active');
     $('#body').html(`
 
     <div class="heading-page header-text"> 

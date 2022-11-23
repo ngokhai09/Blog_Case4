@@ -1,6 +1,6 @@
-async function showListBlog(element) {
+async function showListBlog(id) {
     $("li").removeClass('active');
-    element.classList.add('active')
+    $("#"+id).addClass('active');
     let html = `    
         <div class="heading-page header-text">
             </div>

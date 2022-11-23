@@ -1,6 +1,8 @@
-showHome();
+showHome('home');
 
-function showHome() {
+function showHome(id) {
+    $("li").removeClass('active');
+    $("#"+id).addClass('active');
     $('#body').html(`
     <div class="main-banner header-text">
         <div class="container-fluid">

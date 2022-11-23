@@ -1,6 +1,6 @@
-function showFormCreate(element) {
+function showFormCreate(id) {
     $("li").removeClass('active');
-    element.classList.add('active')
+    $("#"+id).addClass('active');
     $('#body').html(`
 <div class="heading-page header-text">
     </div>

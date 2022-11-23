@@ -1,6 +1,8 @@
 const ACCESS_TOKEN = 'token';
 const ID_USER = 'idUser';
-function showFormLogin() {
+function showFormLogin(id) {
+    $("li").removeClass('active');
+    $("#"+id).addClass('active');
     let htmlLogin = `<div class="heading-page header-text">
     </div>
     <section class="contact-us">
