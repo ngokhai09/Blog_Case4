@@ -11,7 +11,7 @@ async function showDetail(id) {
                 <div class="col-lg-12">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                        <img style="height: 300px; width: 100%" src="${post.image}" alt="">
+                        <img style="width: 100%" src="${post.image}" alt="">
                     </div>
                     <div class="down-content">
                     <div class="row">

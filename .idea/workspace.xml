@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/blog/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/blog/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/src/blog/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/detail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +45,15 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Project.color": "394847",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;394847&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\image" />
