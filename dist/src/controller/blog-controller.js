@@ -20,8 +20,8 @@ class BlogController {
                 page = +req.query.page;
                 offset = (+page - 1) * limit;
             }
-            let totalBlogs = await blog_1.Blog.countDocuments({});
-            let totalPage = Math.ceil(totalBlogs / totalBlogs);
+            let totalBlogs = await blog_1.Blog.countDocuments({ status: { $eq: 2 } });
+            let totalPage = Math.ceil(totalBlogs / limit);
             let blogs = await blog_service_1.default.findAll(limit, offset);
             return res.status(201).json({
                 blogs: blogs,
@@ -39,8 +39,21 @@ class BlogController {
         this.update = async (req, res) => {
         };
         this.findByUser = async (req, res) => {
-            let blogs = await blog_service_1.default.findByUser(req.params.id);
-            return res.status(201).json(blogs);
+            let limit = 6;
+            let offset = 0;
+            let page = 1;
+            if (req.query.page) {
+                page = +req.query.page;
+                offset = (+page - 1) * limit;
+            }
+            let totalBlogs = await blog_1.Blog.countDocuments({ Account: Number(req.params.id) });
+            let totalPage = Math.ceil(totalBlogs / limit);
+            let blogs = await blog_service_1.default.findByUser(req.params.id, limit, offset);
+            return res.status(201).json({
+                blogs: blogs,
+                currentPage: page,
+                totalPage: totalPage
+            });
         };
         this.findTop4 = async (req, res) => {
             let blogs = await blog_service_1.default.findTop4();

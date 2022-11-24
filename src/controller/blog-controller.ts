@@ -17,8 +17,8 @@ class BlogController {
             page = +req.query.page;
             offset = (+page - 1) * limit;
         }
-        let totalBlogs = await Blog.countDocuments({});
-        let totalPage = Math.ceil(totalBlogs / totalBlogs);
+        let totalBlogs = await Blog.countDocuments({status: {$eq: 2}});
+        let totalPage = Math.ceil(totalBlogs / limit);
         let blogs = await blogService.findAll(limit, offset);
         return res.status(201).json({
             blogs: blogs,
@@ -39,8 +39,21 @@ class BlogController {
     }
 
     findByUser = async (req: Request, res: Response) => {
-        let blogs = await blogService.findByUser(req.params.id);
-        return res.status(201).json(blogs);
+        let limit = 6;
+        let offset = 0;
+        let page = 1;
+        if (req.query.page) {
+            page = +req.query.page;
+            offset = (+page - 1) * limit;
+        }
+        let totalBlogs = await Blog.countDocuments({Account: Number(req.params.id)});
+        let totalPage = Math.ceil(totalBlogs / limit);
+        let blogs = await blogService.findByUser(req.params.id, limit, offset);
+        return res.status(201).json({
+            blogs: blogs,
+            currentPage: page,
+            totalPage: totalPage
+        });
     }
     findTop4 = async (req: Request, res: Response) => {
         let blogs = await blogService.findTop4();

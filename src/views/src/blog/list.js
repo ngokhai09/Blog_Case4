@@ -1,6 +1,7 @@
+
 async function showListBlog(id) {
     $("li").removeClass('active');
-    $("#"+id).addClass('active');
+    $("#" + id).addClass('active');
     $('#body').html(`
 
 <div class="heading-page header-text">
@@ -45,16 +46,38 @@ async function showListBlog(id) {
             </div>
         </div>
     </section>
+     <div class="col-lg-12">
+                  <ul class="page-numbers" >
+                    <div id="paging">
+                    
+                    </div>                    
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                  </ul>
+                </div>
     `)
-    await getAll();
+    await getAll(1);
 }
-async function getAll(){
+
+async function getAll(currentPage) {
     let html = '';
     await $.ajax({
         type: 'GET',
-        url: 'http://localhost:8080/blogs/user/'+localStorage.getItem('idUser'),
+        url: 'http://localhost:8080/blogs/user/' + localStorage.getItem('idUser') + '?page=' + currentPage,
         success: (blogs) => {
-            for(let blog of blogs){
+            if(currentPage >= blogs.totalPage) {
+                currentPage = 1;
+            } else {
+                currentPage++;
+            }
+
+            //paging
+            console.log(currentPage)
+            let htmlPaging = ''
+            for (let i = 0; i < +blogs.totalPage; i++) {
+                htmlPaging += `<li><a onclick="getAll(${i + 1})">${i+ 1}</a></li>`
+            }
+            $('#paging').html(htmlPaging)
+            for (let blog of blogs.blogs) {
                 html += `<div class="col-lg-4" onclick="showDetail(${blog._id})">
                           <div class="blog-post">
                             <div class="blog-thumb">

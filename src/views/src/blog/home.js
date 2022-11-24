@@ -1,4 +1,5 @@
 let page  = 1
+
 showHome('home');
 function showHome(id) {
     $("li").removeClass('active');
@@ -107,7 +108,8 @@ function getPosts() {
             // Authorization: 'Bearer ' + localStorage.getItem(ACCESS_TOKEN)
         },
         success: (posts) => {
-            if(posts.totalPage < page){
+            console.log(page)
+            if(posts.totalPage <= page){
                 page = 1;
             } else {
                 page++;
