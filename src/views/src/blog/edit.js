@@ -61,7 +61,7 @@ async function showEdit(id) {
             tabsize: 2,
             height: 400,
         });
-        $('#content').summernote('editor.insertText', post.content);
+        $("#content").summernote("code", post.content);
     })
 
 

@@ -41,7 +41,7 @@ function showHome(id) {
                             <div id="posts">
                                
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12" id="all">
                                 <div class="main-button">
                                     <a onclick="getPosts()" style="color: white">Xem thêm</a>
                                 </div>
@@ -49,7 +49,7 @@ function showHome(id) {
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" id="nav">
                     <div class="sidebar">
                         <div class="row">
                             <div class="col-lg-12">
@@ -116,7 +116,7 @@ function getPosts() {
             console.log('post',posts)
             for (const post of posts.blogs) {
                     htmlPosts += `
-                <div class="col-lg-12" onclick="showDetails(${post._id})">
+                <div class="col-lg-12" onclick="showDetail(${post._id})">
                                     <div class="blog-post">
                             <div class="blog-thumb">
                               <img  src="${post.image}" alt="">

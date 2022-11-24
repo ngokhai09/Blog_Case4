@@ -3,23 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/model/blog.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/model/blog.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/routes/blog-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/blog-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/routes/blog-router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/blog-router.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/blog-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/blog-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/blog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/blog.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/blog-router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/blog-router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/blog-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/blog-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/src/blog/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/src/blog/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/src/blog/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,9 +49,15 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ts.external.directory.path" value="C:\DuAn\Blog_Case4\node_modules\typescript\lib" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Project.color": "394847",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\Work\\CodeGym\\Code_Front\\Module4\\Blog_CMD4\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Work\CodeGym\Code_Front\Module4\Blog_CMD4\src\views\library\image" />
@@ -97,6 +90,7 @@
       <workItem from="1669083080642" duration="4962000" />
       <workItem from="1669114128909" duration="15270000" />
       <workItem from="1669165176092" duration="696000" />
+      <workItem from="1669251762986" duration="1006000" />
     </task>
     <servers />
   </component>
@@ -108,7 +102,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/fixCss" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
