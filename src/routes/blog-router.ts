@@ -5,6 +5,6 @@ blogRouter.get('/', blogController.index);
 blogRouter.get('/:id', blogController.show);
 blogRouter.get('/user/:id', blogController.findByUser);
 blogRouter.post('/', blogController.store);
-blogRouter.put('/', blogController.update);
+blogRouter.put('/:id', blogController.update);
 blogRouter.delete('/', blogController.destroy);
 blogRouter.get('/search/top5',blogController.findTop4)

@@ -36,6 +36,12 @@ class BlogController {
     }
 
     update = async (req: Request, res: Response) => {
+        let id = req.params.id;
+        let blog = await blogService.updateBlog(id, req.body);
+        if(!blog){
+            return res.status(201).json("Blog Not Found");
+        }
+        return res.status(201).json(blog);
     }
 
     findByUser = async (req: Request, res: Response) => {

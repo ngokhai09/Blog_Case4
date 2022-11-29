@@ -23,6 +23,9 @@ class BlogService {
         if(!blog){
             return null;
         }
+        newBlog._id = id;
+        return Blog.updateOne({_id: id}, newBlog);
+
     }
     delete = async (id) => {
         let blog = Blog.findOne({_id: id});

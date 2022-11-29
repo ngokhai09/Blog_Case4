@@ -2,6 +2,7 @@ async function showEdit(id) {
     let post = await getDetail(id);
     $("#nav").remove();
     $("#all").remove();
+    localStorage.setItem('coverImage', post.image);
     $('#posts').html(`
 <div class="heading-page header-text" >
     </div>
@@ -56,8 +57,8 @@ async function showEdit(id) {
                         </div><!-- col-2 -->
                     </div>
                 </div>
-                <button class="main-button" style="background-color: #f48840; width: 100%" onclick="addBlog()" >
-                              Tạo
+                <button class="main-button" style="background-color: #f48840; width: 100%" onclick="editBlog(${post._id})" >
+                              Sửa
                             </button>
 
             </div>
@@ -100,7 +101,7 @@ function getCategoriesEdit(id) {
     })
 }
 
-function editBlog() {
+function editBlog(id) {
     let title = $("#title").val();
     let content = $("#content").val();
     let image = localStorage.getItem('coverImage');
@@ -118,14 +119,14 @@ function editBlog() {
     }
     console.log(blog)
     $.ajax({
-        type: 'POST',
-        url: 'http://localhost:8080/blogs',
+        type: 'PUT',
+        url: 'http://localhost:8080/blogs/'+id,
         data: JSON.stringify(blog),
         headers: {
             'Content-Type': 'application/json'
         },
         success: (data) => {
-            alert("Đăng bài thành công");
+            alert("Sửa thành công");
             showHome();
         }
     })

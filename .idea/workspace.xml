@@ -3,6 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="fc721109-b73b-426c-9b95-63de1b1899bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controller/blog-controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controller/blog-controller.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/blog-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/blog-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/blog-router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/blog-router.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/service/blog-service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/blog-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/blog-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/blog-router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/blog-router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/blog-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/blog-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/src/blog/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/src/blog/edit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
