@@ -66,3 +66,66 @@ async function showEdit(id) {
 
 
 }
+function editBlog() {
+    let title = $("#title").val();
+    let content = $("#content").val();
+    let image = localStorage.getItem('coverImage');
+    let status = $('#status').val();
+    let Category = $('#categoryCreate').val()
+    let blog = {
+        "title": title,
+        "content": content,
+        "image": image,
+        "Account": localStorage.getItem(ID_USER),
+        "status": +status,
+        "Category": {
+            _id: Category
+        }
+    }
+    console.log(blog)
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:8080/blogs',
+        data: JSON.stringify(blog),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        success: (data) => {
+            alert("Đăng bài thành công");
+            showHome();
+        }
+    })
+}
+
+// function uploadCoverImage(e) {
+//     let fbBucketName = 'images';
+//     let uploader = document.getElementById('uploader');
+//     let file = e.target.files[0];
+//     let storageRef = firebase.storage().ref(`${fbBucketName}/${file.name}`);
+//     let uploadTask = storageRef.put(file);
+//     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
+//         function (snapshot) {
+//             let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+//             uploader.value = progress;
+//             switch (snapshot.state) {
+//                 case firebase.storage.TaskState.PAUSED:
+//                     break;
+//                 case firebase.storage.TaskState.RUNNING:
+//                     break;
+//             }
+//         }, function (error) {
+//             switch (error.code) {
+//                 case 'storage/unauthorized':
+//                     break;
+//
+//                 case 'storage/canceled':
+//                     break;
+//
+//                 case 'storage/unknown':
+//                     break;
+//             }
+//         }, function () {
+//             let downloadURL = uploadTask.snapshot.downloadURL;
+//             localStorage.setItem('coverImage', downloadURL);
+//         });
+// }
