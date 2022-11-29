@@ -37,6 +37,12 @@ class BlogController {
         this.destroy = async (req, res) => {
         };
         this.update = async (req, res) => {
+            let id = req.params.id;
+            let blog = await blog_service_1.default.updateBlog(id, req.body);
+            if (!blog) {
+                return res.status(201).json("Blog Not Found");
+            }
+            return res.status(201).json(blog);
         };
         this.findByUser = async (req, res) => {
             let limit = 6;

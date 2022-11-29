@@ -4,7 +4,7 @@ declare class BlogController {
     index: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     show: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     destroy: (req: Request, res: Response) => Promise<void>;
-    update: (req: Request, res: Response) => Promise<void>;
+    update: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     findByUser: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     findTop4: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
 }

@@ -11,7 +11,7 @@ declare class BlogService {
     findByUser: (userId: any, limit: any, offset: any) => Promise<Omit<import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
         _id: number;
     }>, never>[]>;
-    updateBlog: (id: any, newBlog: any) => Promise<any>;
+    updateBlog: (id: any, newBlog: any) => Promise<import("mongodb").UpdateResult>;
     delete: (id: any) => Promise<boolean>;
     findTop4: () => Promise<(import("mongoose").Document<unknown, any, import("../model/blog").IBlog> & import("../model/blog").IBlog & Required<{
         _id: number;
